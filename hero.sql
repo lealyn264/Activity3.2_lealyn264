@@ -173,7 +173,8 @@ VALUES
     /*Provide a list of heroes classified as archers.*/
     SELECT class_name
     FROM public.class
-    WHERE class_name LIKE '%Archers%';
+    WHERE class_name LIKE '%Archers%'
+    ;
 
     /*Retrieve the average player level for each class,
 	arranging them in descending order from the highest level to the lowest.*/
