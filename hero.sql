@@ -162,3 +162,10 @@ VALUES
 	--Delete the item associated with hero 1.
     DELETE FROM public.heroitem
     WHERE hero_id = 1;
+
+     /*List the player names and their corresponding hero names that are actively in
+	use during gameplay, excluding those with inactive heroes.*/
+    ELECT p.player_name, h.hero_name
+    FROM public.player p
+    INNER JOIN public.hero h ON p.hero_id = h.hero_id
+    WHERE h.is_active = true;
